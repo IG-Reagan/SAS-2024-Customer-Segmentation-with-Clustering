@@ -1,64 +1,54 @@
 # Customer Segmentation with Clustering
 
 ## Overview
-This project applied unsupervised learning techniques to segment customers of a multinational e-commerce business. The objective was to identify distinct groups of customers based on purchasing behaviour and demographics, enabling more targeted marketing strategies and improved customer retention.
-
-The analysis used clustering algorithms (KMeans and Hierarchical) alongside dimensionality reduction (PCA, t-SNE) to explore customer groups and generate actionable insights.
+This project applies unsupervised machine learning to segment customers of a global e-commerce company into distinct groups based on behavioural and value metrics. By identifying customer clusters, the business can optimise marketing strategies, improve retention, and allocate resources more effectively.
 
 ## Problem Statement
-E-commerce companies need to understand their diverse customer base to improve marketing efficiency, customer satisfaction, and retention. This project addressed the challenge by using clustering methods to group customers based on frequency, recency, customer lifetime value (CLV), and average unit cost. The resulting segments provide a basis for targeted promotions, loyalty programmes, and product development.
+E-commerce businesses serve customers with diverse behaviours, preferences, and value contributions. Grouping customers into meaningful segments enables targeted marketing campaigns and loyalty programmes that drive revenue growth and reduce churn. The objective of this project was to use clustering methods to uncover distinct customer segments and derive actionable insights for the business.
+
+## Data Source
+The dataset was provided by **SAS (2024)** and represents an anonymised, real-world e-commerce organisation. It includes transactions from **five continents (Oceania, North America, Europe, Africa, Asia)** and **47 countries**, covering **951,668 rows of orders** made between **1 January 2012 and 30 December 2016**. After aggregation, the dataset contained approximately **68,300 unique customers**.  
+
+> Disclaimer: While the dataset originates from SAS, the business context for this project is illustrative.
 
 ## Variables & Explanations
-**Original dataset variables (sample):**
-- `Quantity`: Number of units ordered.  
-- `City`, `State Province`, `Country`, `Continent`: Customer location data.  
-- `Order Date`, `Delivery Date`: Dates of transaction and fulfilment.  
-- `Total Revenue`: Total revenue of order.  
-- `Unit Cost`: Cost per unit ordered.  
-- `Discount`: Discount percentage applied.  
-- `Order Type Label`: Sales channel (internet, retail, catalogue).  
-- `Customer Group`: Loyalty group membership.  
-- `Customer Type`: Loyalty membership tier.  
-- `Profit`: Calculated as `(Total Revenue – Unit Cost) × Quantity`.  
-- `Days to Delivery`: Days between order and delivery.  
-- `Customer ID`: Unique identifier for each customer.  
+The dataset contained 20 raw features. Key examples:  
+- **Quantity** – Number of items ordered.  
+- **City / Country / Continent** – Customer location.  
+- **Order & Delivery Dates** – Used to derive recency and delivery metrics.  
+- **Total Revenue** – Value of the order (USD).  
+- **Unit Cost** – Cost per item (USD).  
+- **Discount** – Discount percentage applied.  
+- **Customer Group / Type** – Loyalty programme labels.  
+- **Customer ID** – Unique customer identifier.  
 
-**Engineered features:**
-- **Frequency**: Number of purchases by customer over study period.  
-- **Recency**: Days since last order.  
-- **Customer Lifetime Value (CLV)**: Total income generated per customer.  
-- **Average Unit Cost**: Average cost of items purchased.  
-- **Customer Age**: Derived from birth date.  
+**Engineered features for segmentation**:  
+- **Frequency** – Number of purchases per customer.  
+- **Recency** – Days since the last purchase.  
+- **Customer Lifetime Value (CLV)** – Total revenue per customer.  
+- **Average Unit Cost** – Mean price of purchased items.  
+- **Customer Age** – Derived from date of birth.  
 
 ## Methods / Tools Used
-- **Python Libraries**: pandas, numpy, matplotlib, seaborn, scikit-learn, SciPy  
-- **Feature Engineering**: Derived Frequency, Recency, CLV, Avg. Unit Cost, Age  
-- **Pre-processing**: Handling missing values, removing duplicates, scaling, one-hot encoding  
-- **Dimensionality Reduction**: PCA (Principal Component Analysis), t-SNE  
-- **Clustering Techniques**:  
-  - KMeans (Elbow and Silhouette methods for k selection)  
-  - Hierarchical clustering (Agglomerative)  
+- **Languages & Libraries**: Python, Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, SciPy  
+- **Preprocessing**: Handling missing values, duplicates, feature engineering, scaling, encoding  
+- **Dimensionality Reduction**: PCA, t-SNE  
+- **Clustering**:  
+  - KMeans (final model, *k=4*)  
+  - Hierarchical Agglomerative Clustering (trialled on samples)  
+- **Evaluation**: Elbow Method, Silhouette Scores  
 
 ## Results / Outcomes
-- **Optimal number of clusters**: 4 (determined via Elbow and Silhouette methods).  
+- Optimum segmentation identified with **4 clusters** using KMeans.  
 - **Cluster profiles**:  
-  - **Cluster 1**: Medium frequency, medium CLV, lower unit cost items.  
-  - **Cluster 2**: Low frequency, low CLV, low loyalty — candidates for targeted promotions.  
-  - **Cluster 3**: High frequency, high CLV, mostly low-cost repeat purchases (loyal customers).  
-  - **Cluster 4**: Low frequency, high unit cost — occasional big-ticket buyers.  
-
-- KMeans provided the most stable segmentation compared with hierarchical clustering, which was resource-intensive and sensitive to outliers.  
-
-## Source of Data
-The dataset originates from an anonymised e-commerce database made available by **SAS (2024)** for educational and research purposes. It covers transactions from 2012 to 2016 across 47 countries and five continents, comprising 951,668 records.  
+  - *Cluster 1*: Medium frequency, medium CLV, low-cost items, increasing loyalty  
+  - *Cluster 2*: Low activity, low CLV, weak brand loyalty → require targeted promotions  
+  - *Cluster 3*: High frequency, high CLV, loyal “Gold” customers (low-cost frequent purchases)  
+  - *Cluster 4*: Low frequency, high-cost purchases → growth potential with delivery incentives  
+- KMeans was computationally efficient and robust compared to hierarchical clustering on this dataset.  
 
 ## How to Run
 1. Clone this repository.  
-2. Install dependencies listed in `requirements.txt`.  
-3. Open the notebook `Customer_Segmentation.ipynb`.  
-4. Run all cells to reproduce the feature engineering, dimensionality reduction, and clustering analysis.  
-   - **Note**: Original dataset not included for confidentiality. A synthetic subset can be used for demonstration.  
-
-## Links to Supplementary Material
-- [Project Report (PDF)](link-to-your-drive-folder)  
-- [Presentation / Visuals](link-to-your-drive-folder)  
+2. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
