@@ -4,7 +4,7 @@
 This project applies unsupervised machine learning to segment customers of a global e-commerce company into distinct groups based on behavioural and value metrics. By identifying customer clusters, the business can optimise marketing strategies, improve retention, and allocate resources more effectively.
 
 ## Problem Statement
-E-commerce businesses serve customers with diverse behaviours, preferences, and value contributions. Grouping customers into meaningful segments enables targeted marketing campaigns and loyalty programmes that drive revenue growth and reduce churn. The objective of this project was to use clustering methods to uncover distinct customer segments and derive actionable insights for the business.
+Retailers face the challenge of understanding diverse customer bases across multiple continents. Grouping customers into meaningful segments enables more effective resource allocation and tailored marketing strategies. The objective of this project was to explore, preprocess, and analyse a large transactional dataset to uncover meaningful customer clusters that could guide marketing and retention efforts.
 
 ## Data Source
 The dataset was provided by **SAS (2024)** and represents an anonymised, real-world e-commerce organisation. It includes transactions from **five continents (Oceania, North America, Europe, Africa, Asia)** and **47 countries**, covering **951,668 rows of orders** made between **1 January 2012 and 30 December 2016**. After aggregation, the dataset contained approximately **68,300 unique customers**.  
@@ -50,5 +50,18 @@ The dataset contained 20 raw features. Key examples:
 ## How to Run
 1. Clone this repository.  
 2. Install dependencies:  
-   ```bash
    pip install -r requirements.txt
+
+3. Open and run the notebook:
+   customer_segmentation_with_clustering.ipynb
+
+
+4. Note: Raw dataset is not included due to licensing. A synthetic sample may be provided for demonstration.
+
+## Supplementary Materials
+
+- Full project report with analysis and visualisations: [Available on request]
+
+- Presentation slides: [Available on request]
+
+---
