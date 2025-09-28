@@ -1,6 +1,6 @@
 # Customer Segmentation with Clustering
 
-"""**This project applies unsupervised machine learning to segment e-commerce customers using clustering methods.  The dataset (SAS, 2024) covers ~68k customers across 47 countries, with transactions from 2012–2016. Key techniques include feature engineering (Frequency, Recency, CLV, Avg. Unit Cost, Age), dimensionality reduction (PCA, t-SNE), and clustering (KMeans, Hierarchical). The final KMeans model identified 4 customer segments, providing insights for targeted marketing and retention strategies.** """
+**This project applies unsupervised machine learning to segment e-commerce customers using clustering methods.  The dataset (SAS, 2024) covers ~68k customers across 47 countries, with transactions from 2012–2016. Key techniques include feature engineering (Frequency, Recency, CLV, Avg. Unit Cost, Age), dimensionality reduction (PCA, t-SNE), and clustering (KMeans, Hierarchical). The final KMeans model identified 4 customer segments, providing insights for targeted marketing and retention strategies.**
 
 **1. Import the required libraries and data set with the provided URL.**
 
