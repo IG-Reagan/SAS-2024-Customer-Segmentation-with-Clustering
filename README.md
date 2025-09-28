@@ -55,7 +55,8 @@ The dataset contained 20 raw features. Key examples:
    pip install -r requirements.txt
 
 3. Open and run the notebook:
-   customer_segmentation_with_clustering.ipynb or access the script customer_segmentation_with_clustering.py
+   - customer_segmentation_with_clustering.ipynb
+   - or access the script customer_segmentation_with_clustering.py
 
 
 5. Note: Raw dataset is not included due to licensing. A synthetic sample may be provided for demonstration.
