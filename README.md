@@ -7,7 +7,9 @@ This project applies unsupervised machine learning to segment customers of a glo
 Retailers face the challenge of understanding diverse customer bases across multiple continents. Grouping customers into meaningful segments enables more effective resource allocation and tailored marketing strategies. The objective of this project was to explore, preprocess, and analyse a large transactional dataset to uncover meaningful customer clusters that could guide marketing and retention efforts.
 
 ## Data Source
-The dataset was provided by **SAS (2024)** and represents an anonymised, real-world e-commerce organisation. It includes transactions from **five continents (Oceania, North America, Europe, Africa, Asia)** and **47 countries**, covering **951,668 rows of orders** made between **1 January 2012 and 30 December 2016**. After aggregation, the dataset contained approximately **68,300 unique customers**.  
+The dataset was provided by **SAS (2024)** and represents an anonymised, real-world e-commerce organisation. It includes transactions from **five continents (Oceania, North America, Europe, Africa, Asia)** and **47 countries**, covering **951,668 rows of orders** made between **1 January 2012 and 30 December 2016**. After aggregation, the dataset contained approximately **68,300 unique customers**. 
+
+Reference: SAS, 2024. CUSTOMERS_CLEAN [Data set]. SAS. Last revised on 15 December 2021. [Accessed 20 February 2024].
 
 > Disclaimer: While the dataset originates from SAS, the business context for this project is illustrative.
 
